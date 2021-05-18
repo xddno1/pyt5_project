@@ -13,7 +13,7 @@ class Example(QWidget):
         # QToolTip.setFont("SansSerif", 10)
         # 设置按钮的提示
         self.setToolTip("This is a <b>QWidget</b> widget")
-        # 创建一个按钮 并赋值，方便后面操作此按钮
+        # 创建一个按钮 并赋值，方便后面操作此按钮  第一个参数是按钮的标签，第二个参数是它的父控件
         btn = QPushButton("Button", self)
         # 设置按钮提示
         btn.setToolTip("This is a <b>QPushButon</b> widget")
