@@ -15,7 +15,7 @@ class Example(QMainWindow):
         # 创建状态栏
         self.statusBar()
         # 创建一个QAction，设置快捷键，设置状态提示，绑定点击事件
-        openFile = QAction(QIcon("./src/boximg.png"), "Open", self)
+        openFile = QAction(QIcon("../src/boximg.png"), "Open", self)
         openFile.setShortcut("Ctrl+O")
         openFile.setStatusTip("Open new File")
         openFile.triggered.connect(self.showDialog)
@@ -26,7 +26,7 @@ class Example(QMainWindow):
         # 窗体的一些设置
         self.setGeometry(300, 300, 350, 300)
         self.setWindowTitle("File dialog")
-        self.setWindowIcon(QIcon("./src/boximg.png"))
+        self.setWindowIcon(QIcon("../src/boximg.png"))
         self.show()
 
     def showDialog(self):

@@ -10,7 +10,7 @@ class Icon(QtWidgets.QWidget):
         self.setGeometry(300, 300, 250, 150)
         self.setWindowTitle("Icon")
         # 下面的代码用于设置窗体图标
-        self.setWindowIcon(QIcon("../src/boximg.png"))
+        self.setWindowIcon(QIcon("../src/turingLogo.jpg"))
 
 
 if __name__ == "__main__":
