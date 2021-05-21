@@ -1,6 +1,20 @@
 import sys
-from PyQt5.QtWidgets import (QWidget, QHBoxLayout, QLabel, QApplication)
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import (QPushButton, QWidget, QLineEdit, QApplication)
+
+
+class Button(QPushButton):
+    def __init__(self, title, parent):
+        super().__init__(title, parent)
+        self.setAcceptDrops(True)
+
+    def dragEnterEvent(self, e):
+        if e.mimeData().hasFormat("text/plain"):
+            e.accept()
+        else:
+            e.ignore()
+
+    def dropEvent(self, e):
+        self.setText(e.mimeData().text())
 
 
 class Example(QWidget):
@@ -9,18 +23,15 @@ class Example(QWidget):
         self.initUI()
 
     def initUI(self):
-        # 水平布局，创建QPixmap
-        hbox = QHBoxLayout(self)
-        pixmap = QPixmap("./src/turingLogo.jpg")
-        # 创建label，设置label的值为qixmap
-        lb1 = QLabel(self)
-        lb1.setPixmap(pixmap)
-        # 将label放入水平布局，再将水平布局放入窗口
-        hbox.addWidget(lb1)
-        self.setLayout(hbox)
-        # 窗口的一些设置
-        self.move(300, 200)
-        self.setWindowTitle("Red Tank")
+        edit = QLineEdit("", self)
+        edit.setDragEnabled(True)
+        edit.move(30, 65)
+
+        button = Button("Button", self)
+        button.move(190, 65)
+
+        self.setWindowTitle("Simple drag & drop")
+        self.setGeometry(300, 300, 300, 150)
         self.show()
 
 
