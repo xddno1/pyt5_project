@@ -11,8 +11,8 @@ class Example(QMainWindow):
 
     def initUI(self):
         # 创建QAction对象
-        exitAction = QAction(QIcon("../src/boximg.png"), "&退出", self)
-        exitAction1 = QAction(QIcon("../src/boximg.png"), "&啥也不是", self)
+        exitAction = QAction(QIcon("../../src/boximg.png"), "&退出", self)
+        exitAction1 = QAction(QIcon("../../src/boximg.png"), "&啥也不是", self)
         # 设置快捷键属性
         exitAction.setShortcut("Ctrl+Q")
         # 设置状态栏
@@ -31,7 +31,7 @@ class Example(QMainWindow):
 
         self.setGeometry(300, 300, 300, 200)
         self.setWindowTitle("Menubar")
-        self.setWindowIcon(QIcon("../src/boximg.png"))
+        self.setWindowIcon(QIcon("../../src/boximg.png"))
         self.show()
 
 

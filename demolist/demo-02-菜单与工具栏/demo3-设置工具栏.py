@@ -11,7 +11,7 @@ class Example(QMainWindow):
 
     def initUI(self):
         # 创建QAction对象
-        exitAction = QAction(QIcon("../src/boximg.png"), "Exit", self)
+        exitAction = QAction(QIcon("../../src/boximg.png"), "Exit", self)
         # 设置快捷键
         exitAction.setShortcut("Ctrl+Q")
         # 发出triggered信号。这个信号连接到了QApplication的quit()方法。从而使程序停止。

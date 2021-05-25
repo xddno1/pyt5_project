@@ -16,7 +16,7 @@ class Example(QMainWindow):
         self.setCentralWidget(textEdit)
 
         # 创建QAction对象 ，设置快捷键，设置状态提示，绑定关闭窗口事件
-        exitAction = QAction(QIcon("../src/boximg.png"), "Exit", self)
+        exitAction = QAction(QIcon("../../src/boximg.png"), "Exit", self)
         exitAction.setShortcut("Ctrl+Q")
         exitAction.setStatusTip("Exit application")
         exitAction.triggered.connect(self.close)
